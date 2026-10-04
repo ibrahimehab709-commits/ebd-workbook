@@ -17,9 +17,9 @@
  * @returns {string}
  */
 export function greet(name) {
-  // TODO: return a template literal.
-  throw new Error("greet is not written yet");
+  return `Hello, ${name}!`;
 }
+  
 
 /**
  * Doubles a number.
@@ -31,10 +31,8 @@ export function greet(name) {
  * @param {number} n
  * @returns {number}
  */
-export const double = (n) => {
-  // TODO: replace this whole body. Keep `export const double =`.
-  throw new Error("double is not written yet");
-};
+export const double = (n) => n * 2;
+
 
 /**
  * Takes a percentage off a price.
@@ -47,11 +45,10 @@ export const double = (n) => {
  * @param {number} percent for example 25 for 25% off
  * @returns {number} the price after the discount
  */
-export const applyDiscount = (amount, percent) => {
+export const applyDiscount = (amount, percent) =>
+  amount - (amount * percent) / 100;
   // TODO: subtract the percentage from the amount.
-  throw new Error("applyDiscount is not written yet");
-};
-
+  
 /**
  * Now you write the whole function. Nothing is started for you below this
  * line — the spec is here, the code is yours.
@@ -68,7 +65,8 @@ export const applyDiscount = (amount, percent) => {
  * It has to start with `export`, or the tests cannot see it.
  * Look at `double` above if you need the shape of an arrow function.
  */
-
+export const formatPrice = (amount, currency = "EGP") =>
+  `${amount} ${currency}`;
 // TODO: write formatPrice here.
 
 /**
@@ -89,3 +87,6 @@ export const applyDiscount = (amount, percent) => {
  */
 
 // TODO: write applyTwice here.
+export function applyTwice(fn, value) {
+  return fn(fn(value));
+}
