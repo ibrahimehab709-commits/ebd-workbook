@@ -1,0 +1,10 @@
+/* Checkpoint B — your styling. Build it to checkpoint-b/spec.md. */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.article-card {
+    padding: 10px;
+    color: black;
+}
